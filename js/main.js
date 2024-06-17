@@ -5,7 +5,7 @@ const ScoreDisplay = document.querySelector("#ScoreDisplay");
 const generate = document.querySelector(".generate");
 const rangePicker = document.querySelector("#rangePicker");
 const displayWrapper = document.querySelector(".wrapper");
-const arrow = document.querySelector("#arrow");
+
 
 
 
