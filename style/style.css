@@ -43,68 +43,70 @@ main section.controls .bottom .left p {
 main .wrapper {
   display: none;
 }
-main .wrapper .generate {
+main .wrapper section.generate {
   display: grid;
   gap: 12px;
-  background-color: black;
+  background-color: rgb(12, 43, 70);
   box-shadow: rgba(0, 0, 0, 0.35) 0px 2px 7px;
   padding: 25px;
   border-radius: 8%;
   box-sizing: border-box;
 }
-main .wrapper .generate .card-image {
+main .wrapper section.generate .card-image {
   width: 100%;
   height: 100%;
   object-fit: contain;
-  transition: 0.3s;
+  transition: 3s;
   border-radius: 3px;
+  opacity: 0;
 }
-main .wrapper .generate .box,
-main .wrapper .generate .card-image {
+main .wrapper section.generate .box,
+main .wrapper section.generate .card-image {
   user-select: none;
   -webkit-user-drag: none;
 }
-main .wrapper .generate .box {
+main .wrapper section.generate .box {
   width: 100px;
   height: 150px;
   padding: 8px;
-  background-color: blue;
-  border-radius: 10px;
+  background-color: rgba(143, 175, 175, 0.7921568627);
+  border-radius: 8px;
 }
 
-.roate {
+.rotate {
   animation-name: rotate;
-  animation-duration: 2s;
+  animation-duration: 0.2s;
   animation-timing-function: linear;
   cursor: not-allowed !important;
-  background-color: #5a7e5a;
+  background-color: #5a7e9b;
 }
 
-.roate img {
+.rotate img {
   opacity: 1 !important;
 }
 
-.back-roatet {
-  animation-name: rotate;
-  animation-duration: 2s;
+.back-rotate {
+  animation-name: rotate-back;
+  animation-duration: 0.2s;
   animation-timing-function: linear;
   cursor: pointer;
+  background-color: #5a7e9b;
 }
 
 @keyframes rotate {
   0% {
-    transform: rotate(0deg) rotate(-100deg);
+    transform: rotateX(0deg) rotateY(-180deg);
   }
   100% {
-    transform: rotate(0deg) rotate(0deg);
+    transform: rotateX(0deg) rotateY(0deg);
   }
 }
-@keyframes back-roatet {
+@keyframes rotate-back {
   0% {
-    transform: rotate(0deg) rotate(0deg);
+    transform: rotateX(0deg) rotateY(0deg);
   }
   100% {
-    transform: rotate(0deg) rotate(180deg);
+    transform: rotateX(0deg) rotateY(-180deg);
   }
 }
 
